@@ -1,3 +1,3 @@
 ## **Check This Repo for Fun Applications of DS/ML**
 
-*  LinkedIn Job List Scraping with Selenium
+*  [LinkedIn Job List Scraping with Selenium](https://github.com/opal-1996/Applications/blob/main/LinkedIn_Job_Scraping/scraper.py)

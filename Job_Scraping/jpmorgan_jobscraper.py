@@ -68,9 +68,10 @@ class JPMorganScraper:
             
         self.df.to_csv(self.file_name)
 
-base_url = "https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1001,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,keyword=%22data%22,lastSelectedFacet=POSTING_DATES,locationId=300000000289738,selectedPostingDatesFacet=30,sortBy=RELEVANCY,offset="
-latest_collection_time = "05-24-2023"
+if __name__ == "__main__":
+    base_url = "https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1001,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,keyword=%22data%22,lastSelectedFacet=POSTING_DATES,locationId=300000000289738,selectedPostingDatesFacet=30,sortBy=RELEVANCY,offset="
+    latest_collection_time = "05-24-2023"
 
-# scrape data
-JPMorganScraper = JPMorganScraper(base_url=base_url, latest_collection_time=latest_collection_time )
-JPMorganScraper.scraper()
+    # scrape data
+    JPMorganScraper = JPMorganScraper(base_url=base_url, latest_collection_time=latest_collection_time )
+    JPMorganScraper.scraper()
